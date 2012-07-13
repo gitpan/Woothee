@@ -1,5 +1,7 @@
 ---
-abstract: ~
+abstract: 'multi-language user-agent strings parsers (perl implemantation)'
+author:
+  - 'TAGOMORI Satoshi <tagomoris {at} gmail.com>'
 build_requires:
   ExtUtils::MakeMaker: 6.36
   File::Find::Rule: 0
@@ -14,7 +16,7 @@ configure_requires:
 distribution_type: module
 dynamic_config: 1
 generated_by: 'Module::Install version 1.04'
-license: unknown
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -23,4 +25,6 @@ no_index:
   directory:
     - inc
     - t
-version: 0.2.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.2.2
