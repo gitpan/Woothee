@@ -1,5 +1,5 @@
 ---
-abstract: 'multi-language user-agent strings parsers (perl implemantation)'
+abstract: 'multi-language user-agent strings parsers (perl implementation)'
 author:
   - 'TAGOMORI Satoshi <tagomoris {at} gmail.com>'
 build_requires:
@@ -29,4 +29,4 @@ requires:
   perl: 5.10.0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.2.4
+version: 0.2.5
