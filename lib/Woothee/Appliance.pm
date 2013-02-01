@@ -7,7 +7,7 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.3.0";
+our $VERSION = "0.3.1";
 
 sub challenge_playstation {
     my ($ua, $result) = @_;
@@ -20,7 +20,7 @@ sub challenge_playstation {
     elsif (index($ua, "PlayStation Vita") > -1) {
         $data = dataset("PSVita");
     }
-    elsif (index($ua, "PLAYSTATION 3;") > -1) {
+    elsif (index($ua, "PLAYSTATION 3 ") > -1 || index($ua, "PLAYSTATION 3;") > -1) {
         $data = dataset("PS3");
     }
 
