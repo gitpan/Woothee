@@ -7,7 +7,7 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.3.3";
+our $VERSION = "0.3.4";
 
 sub challenge_windows {
     my ($ua, $result) = @_;
@@ -95,6 +95,15 @@ sub challenge_smartphone {
         $data = dataset("iOS");
     } elsif (index($ua, "BlackBerry") > -1) {
         $data = dataset("BlackBerry");
+    }
+
+    if ($result->{Woothee::DataSet->const('KEY_NAME')} and
+            $result->{Woothee::DataSet->const('KEY_NAME')} eq dataset('Firefox')->{Woothee::DataSet->const('KEY_NAME')}) {
+        # Firefox OS specific pattern
+        # http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
+        if ($ua =~ m!^Mozilla/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$!) {
+            $data = dataset("FirefoxOS");
+        }
     }
 
     return 0 unless $data;
