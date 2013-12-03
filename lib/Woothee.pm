@@ -12,7 +12,7 @@ use Woothee::Crawler;
 use Woothee::Appliance;
 use Woothee::Misc;
 
-our $VERSION = "0.3.4";
+our $VERSION = "0.3.5";
 
 sub parse {
     my ($this,$useragent) = @_;
@@ -231,7 +231,7 @@ __END__
 
 Woothee - multi-language user-agent strings parsers (perl implementation)
 
-For Woothee, see https://github.com/tagomoris/woothee
+For Woothee, see https://github.com/woothee/woothee
 
 =head1 SYNOPSIS
 

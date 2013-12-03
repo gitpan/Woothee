@@ -3,19 +3,13 @@ abstract: 'multi-language user-agent strings parsers (perl implementation)'
 author:
   - 'TAGOMORI Satoshi <tagomoris {at} gmail.com>'
 build_requires:
-  ExtUtils::MakeMaker: 6.36
-  File::Find::Rule: 0
-  File::Spec: 0
-  FindBin: 0
-  Path::Class: 0
-  Test::More: 0
-  Time::HiRes: 0
-  YAML: 0
+  Test::More: 0.98
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.6.6, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,8 +17,47 @@ meta-spec:
 name: Woothee
 no_index:
   directory:
-    - inc
     - t
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+provides:
+  Woothee:
+    file: lib/Woothee.pm
+    version: v0.3.5
+  Woothee::Appliance:
+    file: lib/Woothee/Appliance.pm
+    version: v0.3.5
+  Woothee::Browser:
+    file: lib/Woothee/Browser.pm
+    version: v0.3.5
+  Woothee::Crawler:
+    file: lib/Woothee/Crawler.pm
+    version: v0.3.5
+  Woothee::DataSet:
+    file: lib/Woothee/DataSet.pm
+    version: 0
+  Woothee::Misc:
+    file: lib/Woothee/Misc.pm
+    version: v0.3.5
+  Woothee::MobilePhone:
+    file: lib/Woothee/MobilePhone.pm
+    version: v0.3.5
+  Woothee::OS:
+    file: lib/Woothee/OS.pm
+    version: v0.3.5
+  Woothee::Util:
+    file: lib/Woothee/Util.pm
+    version: v0.3.5
+requires:
+  perl: 5.008001
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.3.4
+  bugtracker: https://github.com/woothee/woothee-perl/issues
+  homepage: https://github.com/woothee/woothee-perl
+  repository: git://github.com/woothee/woothee-perl.git
+version: 0.3.5
+x_contributors:
+  - 'TAGOMORI Satoshi <tagomoris@gmail.com>'
