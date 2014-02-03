@@ -45,6 +45,8 @@
       },
       "test" : {
          "requires" : {
+            "File::Find::Rule" : "0",
+            "Path::Class" : "0",
             "Test::More" : "0.98",
             "YAML" : "0"
          }
@@ -53,38 +55,38 @@
    "provides" : {
       "Woothee" : {
          "file" : "lib/Woothee.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::Appliance" : {
          "file" : "lib/Woothee/Appliance.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::Browser" : {
          "file" : "lib/Woothee/Browser.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::Crawler" : {
          "file" : "lib/Woothee/Crawler.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::DataSet" : {
          "file" : "lib/Woothee/DataSet.pm"
       },
       "Woothee::Misc" : {
          "file" : "lib/Woothee/Misc.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::MobilePhone" : {
          "file" : "lib/Woothee/MobilePhone.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::OS" : {
          "file" : "lib/Woothee/OS.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       },
       "Woothee::Util" : {
          "file" : "lib/Woothee/Util.pm",
-         "version" : "v0.3.6"
+         "version" : "v0.3.7"
       }
    },
    "release_status" : "stable",
@@ -98,7 +100,7 @@
          "web" : "https://github.com/woothee/woothee-perl"
       }
    },
-   "version" : "0.3.6",
+   "version" : "0.3.7",
    "x_contributors" : [
       "TAGOMORI Satoshi <tagomoris@gmail.com>"
    ]

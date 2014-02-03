@@ -1,5 +1,8 @@
 Revision history for Perl module Woothee
 
+0.3.7 2014-02-03T03:15:21Z
+   - update testing dependencies
+
 0.3.6 2014-01-21T09:02:21Z
    - add deps on test, for perl without YAML
 
