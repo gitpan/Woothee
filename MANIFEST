@@ -18,6 +18,7 @@ minil.toml
 t/00_compile.t
 t/00_use.t
 t/01_validate_package_name.t
+t/01_version.t
 t/02_dataset.t
 t/02_loop_or_index.t
 t/03_run_testsets.t
