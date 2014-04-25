@@ -7,7 +7,7 @@ use Carp;
 use Woothee::Util qw/update_map update_category update_version update_os/;
 use Woothee::DataSet qw/dataset/;
 
-our $VERSION = "0.4.0";
+our $VERSION = "0.4.1";
 
 sub challenge_windows {
     my ($ua, $result) = @_;
@@ -68,7 +68,7 @@ sub challenge_osx {
             $data = dataset("iPhone");
         }elsif (index($ua, "iPad;") > -1) {
             $data = dataset("iPad");
-        }elsif (index($ua, "iPod;") > -1) {
+        }elsif (index($ua, "iPod") > -1) {
             $data = dataset("iPod");
         }
     }
@@ -113,9 +113,10 @@ sub challenge_smartphone {
 
     if ($result->{Woothee::DataSet->const('KEY_NAME')} and
             $result->{Woothee::DataSet->const('KEY_NAME')} eq dataset('Firefox')->{Woothee::DataSet->const('KEY_NAME')}) {
-        # Firefox OS specific pattern
+        # Firefox OS (phone/tablet) specific pattern
         # http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
-        if ($ua =~ m!^Mozilla/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$!) {
+        # https://github.com/woothee/woothee/issues/2
+        if ($ua =~ m!^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$!) {
             $data = dataset("FirefoxOS");
         }
     }
@@ -202,6 +203,9 @@ sub challenge_misc {
     }
     elsif (index($ua, "X11; FreeBSD ") > -1) {
         $data = dataset("BSD");
+    }
+    elsif (index($ua, "X11; CrOS ") > -1) {
+        $data = dataset("ChromeOS");
     }
 
     if ($data) {
