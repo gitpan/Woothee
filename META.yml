@@ -30,38 +30,38 @@ no_index:
 provides:
   Woothee:
     file: lib/Woothee.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::Appliance:
     file: lib/Woothee/Appliance.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::Browser:
     file: lib/Woothee/Browser.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::Crawler:
     file: lib/Woothee/Crawler.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::DataSet:
     file: lib/Woothee/DataSet.pm
     version: 0
   Woothee::Misc:
     file: lib/Woothee/Misc.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::MobilePhone:
     file: lib/Woothee/MobilePhone.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::OS:
     file: lib/Woothee/OS.pm
-    version: v0.4.1
+    version: v0.4.2
   Woothee::Util:
     file: lib/Woothee/Util.pm
-    version: v0.4.1
+    version: v0.4.2
 requires:
   perl: 5.008001
 resources:
   bugtracker: https://github.com/woothee/woothee-perl/issues
   homepage: https://github.com/woothee/woothee-perl
   repository: git://github.com/woothee/woothee-perl.git
-version: 0.4.1
+version: 0.4.2
 x_contributors:
   - 'hitode909 <hitode909@gmail.com>'
   - 'TAGOMORI Satoshi <tagomoris@gmail.com>'
