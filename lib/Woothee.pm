@@ -12,7 +12,7 @@ use Woothee::Crawler;
 use Woothee::Appliance;
 use Woothee::Misc;
 
-our $VERSION = "0.4.2";
+our $VERSION = "1.0.0";
 
 sub parse {
     my ($this,$useragent) = @_;
@@ -215,6 +215,7 @@ my @filled = (
     Woothee::DataSet->const('ATTRIBUTE_NAME') => Woothee::DataSet->const('VALUE_UNKNOWN'),
     Woothee::DataSet->const('ATTRIBUTE_CATEGORY') => Woothee::DataSet->const('VALUE_UNKNOWN'),
     Woothee::DataSet->const('ATTRIBUTE_OS') => Woothee::DataSet->const('VALUE_UNKNOWN'),
+    Woothee::DataSet->const('ATTRIBUTE_OS_VERSION') => Woothee::DataSet->const('VALUE_UNKNOWN'),
     Woothee::DataSet->const('ATTRIBUTE_VERSION') => Woothee::DataSet->const('VALUE_UNKNOWN'),
     Woothee::DataSet->const('ATTRIBUTE_VENDOR') => Woothee::DataSet->const('VALUE_UNKNOWN'),
 );
